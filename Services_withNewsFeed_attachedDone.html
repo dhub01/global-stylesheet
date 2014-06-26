@@ -1,0 +1,913 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HH Dashboard Template (Services)</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">    
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/lib.functions.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".accountSettingsRollover").hide();
+        $(".accountSettingsButton").click(function(){
+            $(".accountSettingsRollover").toggle();
+        });
+
+
+        /*---------------Locker Log Jquery Section--------------------*/
+        $('.lockerNavButton').click(function(){
+            $(".lockerNavButton").removeClass("lockerNavButtonSelected");
+            $(this).addClass( "lockerNavButtonSelected" );
+        });
+
+        $(".logSection").hide();
+
+        $(".lockerLog").click(function(){
+            $(".vaultSecondaryNavButton").hide();
+            $(".vaultSection").hide();
+            $(".logSection").show();
+        });
+
+        $(".lockerVault").click(function(){
+            $(".logSection").hide();
+            $(".vaultSecondaryNavButton").show();
+            $(".vaultSection").show();
+        });
+
+        
+        /** Text Size Property **/
+       	$('.text-size').hide();
+       	$('.nf-textsize').click(function(){
+       		$('.text-size').toggle();
+       	})
+       	
+       	/** Attachment Funtion **/
+       	$('.nf-attachment').click(function(){
+       		
+       	})
+});
+
+    </script>
+</head>
+<body>
+
+    
+   
+
+
+<!-- ADD ARTICLE POP-UP (NewsFeed) Start--> 
+<div class="nf-addArticleWindow popupWindow">
+
+	<div class="nf-addWindowTop">
+    	<h1 class="moduleHeader">News Feed</h1>
+    	<div class="nf-closeBtn" onclick="closeDashWindow('nf-addArticleWindow');"></div>
+    </div>
+    
+    <input type="text" class="nf-addWindTxtbox" placeholder="Title of Article (Max 45 characters)">
+    
+    <!-- Add Article Header Start-->
+    <div class="nf-header">
+        <h1 class="moduleHeader">Send this Article to:</h1>
+	        <select style="margin: 20px 20px 0 20px; float: left" class="nf-select" onchange="selectArticle(this)">
+	            <option>All Families</option>
+	            <option value="families">Select Families</option>
+	            <option value="rooms">Select Rooms</option>
+	        </select>
+        <h1 class="moduleHeader floatleft">in:</h1>
+        <select style="margin: 20px 20px 0 20px;" class='nf-select2'>
+            <option>Australia</option>
+        </select>
+    </div><!-- Add Article Header End-->
+   
+    <textarea class="nf-textArea"></textarea>
+         
+    <!-- Add Article Footer pt1 Start--> 
+    <div class="nf-footer1">
+    	<h1 class="moduleHeader">Priority:</h1>
+        <div class="checkboxContainer">
+        	<input type="checkbox" checked="checked" onclick="isHighAlert(this);"/> High (Alert)
+        </div>
+        <div class="noteAlert">
+    		Note: This article will be published as an Alert!
+        </div>
+    </div><!-- Add Article Footer pt1 End-->
+
+    <!-- Add Article Footer pt2 Start--> 
+    <div class="nf-footer2">
+    	<div class="nf-icn nf-bold"></div>
+    	<div class="nf-icn nf-italic"></div>
+    	<div class="nf-icn nf-underline"></div>
+    	<img src="css/Images/nf-separator.PNG" class="nf-separator">
+    	<div class="nf-icn nf-textsize"></div>
+    	<img src="css/Images/nf-separator.PNG" class="nf-separator">
+    	<div class="nf-icn nf-numbered"></div>
+    	<div class="nf-icn nf-bulletlist"></div>
+    	<img src="css/Images/nf-separator.PNG" class="nf-separator">
+    	<div class="nf-icn nf-attachment"  onclick="openModalWindow('attachmentWindow')">
+    		<!-- Open Attachment Done -->
+    		<div class="attachFile attachFileOuter">
+			<img src="css/Images/icon_close.png" class="attachCloseBtn2"> 
+			<div class="attachFileFnt outerFileFnt"> OutingWaver.pdf</div>
+			</div><!-- Close Attachment Done -->
+    	</div>
+    	<div class="nf-icnDelete"></div>
+    	<div class="moduleButton nf-addarticleBtn">Add Article</div>
+    </div><!-- Add Article Footer pt2 End-->
+    
+    
+    <div class="text-size">
+    	<div class="textProperty"><div class="small">Small</div></div>
+    	<div class="textProperty"><div class="normal">Normal</div></div>
+    	<div class="textProperty"><div class="large">Large</div></div>
+    </div>
+    
+</div><!-- ADD ARTICLE POP-UP (News Feed) End-->
+  
+
+<!-- Open Attachment Window-->
+<div class="attachmentWindow popupWindow">
+	<h1 class="moduleHeader">Add Attachment</h1>
+	<div class="nf-closeBtn" onclick="closeDashWindow('attachmentWindow');"></div>
+	<div class="attachFile">
+		<img src="css/Images/icon_close.png" class="attachCloseBtn"> 
+		<div class="attachFileFnt"> OutingWaver.pdf</div>
+	</div>
+	
+	<div class="attachDragHere">
+		<div class="attachDragHereFnt">Drag file here!</div>
+	</div>
+	
+	<div class="attachTitle attachTitleDone">Limited to one attachment</div>
+	<input type="button" class="attachBtnDone doneBtn" value="Done">
+</div><!-- Close Attachment Window-->
+
+
+
+<!-- Start of Select Families Pop-up-->
+<div class="selectWindowWrapper selectFamiliesWindow popupWindow">
+	<div class="innerContainer">
+	<h1 class="moduleHeader">Select Families</h1>
+	<input type="text" class="nf-inputsearch selectSearch" placeholder="Search Families by Name"/>
+	<br><br><br>
+	
+	<!-- Start of Header Separator-->
+	<div class="logSeparator selectSeparator"></div><!-- End of Header Separator-->
+    
+	<table class="selectTable tblMargin">
+		<tr>
+			<td class="st-1"></td>
+			<td class="st-2">Surname <img src="css/Images/arrow_up.PNG" class="arrow_up"></td>
+			<td class="st-3">First Name</td>
+		</tr>
+	</table>
+	
+	
+	<!-- Start of Select Overflow -->
+	<div class="select-overflow">
+        <table class="selectTable selectTbl">
+            <tr class="st-tr-odd">
+                <td class="td1"><input type="checkbox" checked="checked"></td>
+                <td class="td2">Adams</td>
+                <td>Allison, Mark</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox" checked="checked"></td>
+                <td>Adams</td>
+                <td>Jane, Paul</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Brent</td>
+                <td>Brianna, Phillip</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Crawford</td>
+                <td>David</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Crawford</td>
+                <td>Mary, William</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Davidson</td>
+                <td>Katie, John</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Dragan</td>
+                <td>Samantha, James</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Elwood</td>
+                <td>Mike</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Epsilon</td>
+                <td>Leah, Jack</td>
+            </tr>
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Frankfurt</td>
+                <td>Edward</td>
+            </tr>
+
+            <!-- Added Data -->
+            <tr>
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Frankfurt</td>
+                <td>Edward</td>
+            </tr>
+        </table>
+	</div><!-- End of Select Overflow -->
+	
+	<div class="moduleButton selectBtn">Add Article</div>
+	<input type="button" class="selectCancelBtn" onclick="closeDashWindow('selectFamiliesWindow')" value="Cancel">
+	
+	</div>
+</div><!-- End of Select Families Pop-up-->
+
+
+
+<!-- Start of Select Rooms Pop-up-->
+<div class="selectWindowWrapper selectRoomsWindow popupWindow">
+	<div class="innerContainer">
+	<h1 class="moduleHeader">Select Rooms</h1>
+	<input type="text" class="nf-inputsearch selectSearch" placeholder="Search Rooms by Name"/>
+	<br><br><br>
+	
+	<!-- Start of Header Separator-->
+	<div class="logSeparator selectSeparator"></div><!-- End of Header Separator-->
+    
+	<table class="selectTable tblMargin">
+		<tr>
+			<td class="st-1"></td>
+			<td class="st-2">Room Name <img src="css/Images/arrow_up.PNG" class="arrow_up"></td>
+		</tr>
+	</table>
+	
+	
+	<!-- Start of Select Overflow -->
+	<div class="select-overflow">
+        <table class="selectTable selectTbl roomsTbl">
+            <tr class="st-tr-odd">
+                <td class="td1"><input type="checkbox" checked="checked"></td>
+                <td>YMCA of North York</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-even">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Elwood Childcare Centre</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-odd">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Pert Phillip City Council</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-even">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>YMCA of North York</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-odd">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Elwood Childcare Centre</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-even">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Pert Phillip City Council</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-odd">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>YMCA of North York</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-even">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Elwood Childcare Centre</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-odd">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Pert Phillip City Council</td>
+                <td class="st-3"></td>
+            </tr>
+            <tr class="st-tr-even">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>YMCA of North York</td>
+                <td class="st-3"></td>
+            </tr>
+            <!-- Added Data -->
+            <tr class="st-tr-even">
+                <td  class="td1"><input type="checkbox"></td>
+                <td>Elwood Childcare Centre</td>
+                <td class="st-3"></td>
+            </tr>
+        </table>
+	</div><!-- End of Select Overflow -->
+	
+	<div class="moduleButton selectBtn">Add Article</div>
+	<input type="button" class="selectCancelBtn"  onclick="closeDashWindow('selectRoomsWindow')" value="Cancel">
+	
+	</div>
+</div><!-- End of Select Rooms Pop-up-->
+
+
+
+<div class="background">
+	<div class="contentWrapper">
+    
+    	<!-- HEADER CONTENT -->
+    	<div class="headerContent">
+        	
+    
+            <!-- User Name -->
+            <div class="nameSpace ns-CitEnt">
+            	<h1>Elwood Child Care Center</h1>
+            </div>
+            
+            <!-- Account Info -->
+            <div class="accountInfo">
+            
+            	<div class="accountAvatar AUS">
+                </div>
+                
+                <p class="accountName">Leanne Brown</p>
+                
+                <div class="accountSettingsButton">
+                </div>
+               
+                <!-- HHD: Open Setting Option -->
+                <div class="accountSettingsRollover">
+                    <div class="triangleUp"></div>
+                    <p>Use HubHello! as:</p>
+                    
+                    <ul class="useHHas">
+                    	<a href=""><div class="rolloverIcons" class="personalView"></div><li>Personal View</li></a>
+                        <a href=""><div class="rolloverIcons" class="serviceView"></div><li>Service View</li></a>
+                        <a href=""><div class="rolloverIcons" class="enterpriseView"></div><li>Enterprise View</li></a>
+                        <a href=""><div class="rolloverIcons" class="hhView"></div><li>HubHello! Member</li></a>
+                        <li class="divider"></li>
+                        <a href=""><div class="rolloverIcons" class="settings"></div><li>Settings</li></a>
+                        <a href=""><div class="rolloverIcons" class="logOut"></div><li class="lastLiItem">Log Out</li></a>
+                    </ul>  
+                </div>
+                <!-- HHD: End of Option -->
+            
+            
+                
+            </div><!-- Close #accountInfo -->
+                
+            <!-- "MiddleSection" -rename this later -->
+            <div class="headerMidSection">
+            	<nav class="childCareCenters">	
+                	<ul>
+                    	<li class="noBorder">Ivanhoe Primary</li>
+                    	<li>Kits Retreat Preschool</li>
+                    	<li>Fairfield City Childcare</li>
+                    </ul>
+                </nav>
+                <div class="dinosaur">
+                </div>
+            </div>
+           
+           <!-- "BottomSection" -rename this later -->
+           <div class="headerBottomSection">
+                <div class="alerts">
+                	<div class="alertIcon"></div>
+                	<p class="alertMsg">Alerts (2)</p>
+                    <div class="alertFlipper"></div>
+                </div>
+                
+           <input type="text" class="search" placeholder="Search">
+            
+        </div><!-- Close #headerContent -->
+        
+        
+        
+        <!-- NEWS FEED -->
+        <div class="newsFeedWrapper">
+        	<h1 class="moduleHeader">News Feed</h1>
+            <div class="moduleButton">See All Articles</div>
+            <div class="newsFeedButton" onclick="openModalWindow('nf-addArticleWindow')">Add an Article</div>
+            <p class="moduleSubheader">Click on an article to read it</p>
+            
+            <div class="newsFeedList">
+            
+            	<div class="newsFeedItemEven topItem newsFeedHover">
+                    <p class="newsFeedItem">Are your hopes and expectations realistic?</p>
+                    <p class="newsFeedTimeStamp">9:00am</p>
+                    <div class="newsFeedAuthor"><img src="css/Images/newsFeedAuthor_01.png" style="border-radius: 6px"></div>
+                    <div class="newsFeedService"><img src="css/Images/newsFeedService_01.png" style="border-radius: 6px"></div>
+                </div>
+                
+                <div class="newsFeedItemOdd">
+                    <p class="newsFeedItem">Peanut allergies can be fatal - be aware</p>
+                    <p class="newsFeedTimeStamp">12:00pm</p>
+                    <div class="newsFeedAuthor"><img src="css/Images/newsFeedAuthor_02.png" style="border-radius: 6px"></div>
+                    <div class="newsFeedService"><img src="css/Images/newsFeedService_02.png" style="border-radius: 6px"></div>
+                </div>
+                
+            	<div class="newsFeedItemEven">
+                	<p class="newsFeedItem">UN Report on climate change rings alarm</p>
+                    <p class="newsFeedTimeStamp">Mar 4</p>
+                    <div class="newsFeedAuthor"><img src="css/Images/newsFeedAuthor_01.png" style="border-radius: 6px"></div>
+                    <div class="newsFeedService"><img src="css/Images/newsFeedService_01.png" style="border-radius: 6px"></div>
+                </div>
+                
+                <div class="newsFeedItemOdd bottomItem">
+                    <p class="newsFeedItem">Are your hopes and expectations realistic?</p>
+                    <p class="newsFeedTimeStamp">Mar 19</p>
+                    <div class="newsFeedAuthor"><img src="css/Images/newsFeedAuthor_02.png" style="border-radius: 6px"></div>
+                    <div class="newsFeedService"><img src="css/Images/newsFeedService_02.png" style="border-radius: 6px"></div>
+                </div>
+                
+            </div><!-- Close .newsFeedList -->
+        </div><!-- Close #newsFeedWrapper -->
+
+
+
+      <!-- TODAY'S MENU -->  
+      <div class="todaysMenuWrapper">
+        	<h1 class="moduleHeader">Today's Menu</h1>
+            <div class="moduleButton todayMenuBtn">Add</div>
+            <div class="moduleButton todayMenuBtn">Edit</div>
+            
+            <p class="menuItem">
+            	<span class="menuTime">Breakfast:</span> &nbsp;&nbsp; Cereal, Eggs, Milk</br>
+                <span class="menuTime">Snack:</span> &nbsp;&nbsp; Fruits, Oatmeal</br>
+                <span class="menuTime">Lunch:</span> &nbsp;&nbsp; Pasta, Salad, Bread</br>
+                <span class="menuTime">Snack:</span> &nbsp;&nbsp; Granola Bar</br>
+                <span class="menuTime">Dinner:</span> &nbsp;&nbsp; Tuna Pasta Bake</br>
+                <br><br>
+                <img src="css/Images/Spoon.png" class="spoonImage"><br>
+                <br>
+                <img src="css/Images/Spoon.png" class="spoonImage">
+            </p>
+            
+        </div><!-- Close #todaysMenuWrapper -->
+        
+        
+        
+   
+        
+        
+        
+        <!-- TIMELINE -->
+        <div class="timelineWrapper">
+        
+        	<h1 class="moduleHeader">Timeline</h1>
+            
+            <!-- Select the date displayed-->
+            <div class="timelineDateSelector"> 
+            	<div class="timelineDateSelectorArrowLeft"></div>
+                <p>Mar 24, 2014</p>
+            	<div class="timelineDateSelectorArrowRight"></div>
+            </div>
+
+            <div class="moduleButton">New Post</div>
+            
+            <!-- Select the timeframe displayed (Day/Week/Month/3 Months) -->
+            <div class="timelineSelectorButtons"> 
+            	<li>
+                	<ul class="firstTimelineButton selected"><a>Day</a></ul>
+                	<ul><a>Week</a></ul>
+                	<ul><a>Month</a></ul>
+                	<ul class="lastTimelineButton"><a>3 Months</a></ul>
+                </li>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="timelineContainer">
+            	<div class="timeline">
+                	<div class="timelineEntryHourly firstHourlyEntry">
+                    	<p>6am</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>7am</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>8am</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>9am</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>10am</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>11am</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>12pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>1pm</p>
+                        <div class="timelineEntryAlertIcon">88</div>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>2pm</p>
+                        <div class="timelineEntryAlertIcon">3</div>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>3pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>4pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>5pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>6pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>7pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly">
+                    	<p>8pm</p>
+                    </div>
+                    
+                	<div class="timelineEntryHourly lastHourlyEntry">
+                    	<p>9pm</p>
+                    </div>
+                    
+                </div>
+                
+            </div><!-- Close #timelineContainer -->
+                     
+            
+            <!-- Timeline Radio Buttons -->
+            <form class="timelineRadioButtonContainer">
+            	<div class="inputElements"><input type="radio" name="" value="All">All</div>
+            	<div class="inputElements"><input type="radio" name="" value="Attendance">Attendance</div>
+            	<div class="inputElements"><input type="radio" name="" value="Events" checked="checked">Events</div>
+            	<div class="inputElements"><input type="radio" name="" value="Medical">Medical</div>
+            	<div class="inputElements"><input type="radio" name="" value="Posts">Posts</div>
+            	<div class="inputElements"><input type="radio" name="" value="Nutrition">Nutrition</div>
+            	<div class="inputElements"><input type="radio" name="" value="Activities">Activities</div>
+            	<div class="inputElements"><input type="radio" name="" value="Growth">Growth</div>
+            	<div class="inputElements"><input type="radio" name="" value="Images">Images</div>
+            </form><!-- Close #timelineRadioButtonContainer -->
+
+        </div><!-- Close #timelineWrapper -->
+        
+        
+                    
+        <!-- IMAGE GALLERY -->
+        <div class="imageGalleryWrapper">
+        	<h1 class="moduleHeader">Image Gallery</h1>
+            <div class="moduleButton">See All Photos</div>
+            
+            <div class="imageGallerySlider">
+            	<div class="imageGalleryArrowLeft"></div>
+                <div class="imageSlider">
+                	<img src="css/Images/imageGalleryImage_01.png"><img src="css/Images/imageGalleryImage_02.png"><img src="css/Images/imageGalleryImage_01.png"><div class="imageSliderAddImage"><a href="">Add a Photo</a></div>
+                </div>
+                <div class="imageGalleryArrowRight"></div>
+            </div>
+            
+        </div><!-- Close #imageGallery -->
+        
+        
+        
+        <!-- CHILDCARE -->
+		<div class="childCareWrapper">
+        	<h1 class="moduleHeader">Childcare</h1>
+        </div><!-- Close #childCareWrapper -->   
+        
+         <!-- HUBWIKI -->
+		<div class="hubWikiWrapperCitEnt">
+        	<h1 class="moduleHeader">HubWiki</h1>
+        </div><!-- Close #hubWikiWrapper --> 
+        
+        
+        
+    <!-- LOCKER AND WEATHER MODULE CONTAINER -->
+    <div class="lockerWeatherWrapper">
+        
+        <!-- LOCKER -->
+        <div class="lockerWrapper">
+        	<h1 class="moduleHeader">Locker</h1>
+            <div class="lockerContainer">
+            
+            	<!-- Locker Navigation -->
+            	<div class="lockerNav">
+                	<div class="lockerNavButton firstLockerNavButton">
+                    	<div class="LockerAlertIcon">1</div>
+                    	<p class="lockerNavButton">Contacts</p>
+                    </div>
+                    
+                	<div class="lockerNavButton">
+                    	<div class="LockerAlertIcon">1</div>
+                    	<p class="lockerNavButton">Profile</p>
+                    </div>
+                    
+                	<div class="lockerNavButton">
+                    	<div class="LockerAlertIcon lockerAlertIconLong">$250</div>
+                    	<p class="lockerNavButton moveLockerNav">Accounts</p>
+                    </div>
+                    
+                	<div class="lockerNavButton lockerLog">
+                    	<div class="LockerAlertIcon">50</div>
+                    	<p class="lockerNavButton">The Log</p>
+                    </div>
+                    
+                	<div class="lockerNavButton lastLockerNavButton lockerNavButtonSelected lockerVault">
+                    	<div class="LockerAlertIcon">2</div>
+                    	<p class="lockerNavButton">Vault</p>
+                    </div>
+                </div><!-- Close #lockerNav -->
+                
+                <!-- LOCKER <VAULT> CONTENTS: Table, scrollbar, upload document button, searchbar -->
+                <div class="lockerVaultContents">
+                
+                	<!-- 
+                    
+                    The "vault" UI in the Locker module is basically a list of documents the user has uploaded to their account
+                    
+                    Each row has:
+                    1. Its own <div> for an icon 
+                    	-  Use CSS background-image property to change the image: PDF/Image/.zip/etc.)
+                        -  If no icon is necessary, add class "none" to the div class "vaultListRowIcon" 
+                    2. A <p> with class "vaultListRowDescription" - this is the name of the file uploaded to the vault, and would be changed dynamically for each item added
+                    3. A <p> with class "vaultListRowTimestamp" - this is the date/time of upload and would be changed dynamically for each item added
+                    
+                    -->
+				<div class="lockerVaultContainer">                    
+                    
+                	 <!--- Start of Vault Section - LL --->
+                    <div class="vaultSection">
+                	<div class="vaultListRow" class="vaultListTitle">
+                    	<a href=""><div class="vaultListRowIcon none"></div></a>
+                        <p class="vaultListColumnDescription">File Name</p>
+                        <p class="vaultListRowTimestamp">Date Added</p>
+                    </div>
+                    
+                    <div class="vaultListRow odd">
+                    	<a href=""><div class="vaultListRowIcon PDF"></div></a>
+                        <a href=""><p class="vaultListRowDescription">Custody Orders</p></a>
+                        <p class="vaultListRowTimestamp">7/11/2013 4:10PM</p>
+                    </div>
+                    
+                    <div class="vaultListRow even">
+                    	<a href=""><div class="vaultListRowIcon PDF"></div></a>
+                        <a href=""><p class="vaultListRowDescription">Immunisation Record</p></a>
+                        <p class="vaultListRowTimestamp">24/11/2013 6:00PM</p>
+                    </div>
+                    
+                    <div class="vaultListRow odd">
+                    	<a href=""><div class="vaultListRowIcon PDF"></div></a>
+                        <a href=""><p class="vaultListRowDescription">Birth Certificate</p></a>
+                        <p class="vaultListRowTimestamp">24/12/2013 10:00PM</p>
+                    </div>
+                    
+                    <div class="vaultListRow even">
+                    	<a href=""><div class="vaultListRowIcon PDF"></div></a>
+                        <a href=""><p class="vaultListRowDescription">Vaccination Schedule</p></a>
+                        <p class="vaultListRowTimestamp">29/12/2013 1:00PM</p>
+                    </div>
+                    
+                    <div class="vaultListRow odd">
+                    	<a href=""><div class="vaultListRowIcon PDF"></div></a>
+                        <a href=""><p class="vaultListRowDescription">More Documents</p></a>
+                        <p class="vaultListRowTimestamp">29/12/2013 1:00PM</p>
+                    </div>
+                    
+                    <div class="vaultListRow even">
+                    	<a href=""><div class="vaultListRowIcon PDF"></div></a>
+                        <a href=""><p class="vaultListRowDescription">More Documents</p></a>
+                        <p class="vaultListRowTimestamp">29/12/2013 1:00PM</p>
+                    </div>
+					</div><!--- End of Vault Section - LL --->
+                
+                
+                 <!--- Start of Locker Log Section - LL --->	
+                	<div class="logSection">
+                		Showing Account Activity From:
+                		<select>
+                			<option>Today</option>
+                			<option>This Week</option>
+                			<option>This Month</option>
+                			<option>April 2014</option>
+                			<option>March 2014</option>
+                			<option>Last 6 Months</option>
+                			<option>All the time</option>
+                		</select>
+                		
+                		<div class="logSeparator">
+                		---------------------------------------------------------------------------------------------------------------
+                		</div>
+                        
+                        
+                        <table class="log-tbl">
+                        <tr>
+                        	<th>Date Added</th>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>User</th>
+                        </tr>
+                        <tr class="log-bg-even">
+                        	<td>7/11/2013</td>
+                            <td>4:10PM</td>
+                            <td>Uploaded Immunisation Record</td>
+                            <td>Leanne</td>
+                        </tr>
+                        <tr class="log-bg-odd">
+                        	<td>24/11/2013</td>
+                            <td>6:00PM</td>
+                            <td>Uploaded Immunisation Record</td>
+                            <td>Leanne</td>
+                        </tr>
+                        <tr class="log-bg-even">
+                        	<td>24/12/2013</td>
+                            <td>10:00PM</td>
+                            <td>Accessed News and Timeline</td>
+                            <td>Rob</td>
+                        </tr>
+                        <tr class="log-bg-odd">
+                        	<td>29/12/2013</td>
+                            <td>1:00PM</td>
+                            <td>Uploaded Immunisation Record</td>
+                            <td>Leanne</td>
+                        </tr>
+                        <tr class="log-bg-even">
+                        	<td>29/12/2013</td>
+                            <td>1:00PM</td>
+                            <td>Uploaded Immunisation Record</td>
+                            <td>Leanne</td>
+                        </tr>
+                        </table>
+                        </div> <!--- End of Locker Log Section - LL --->
+
+                
+                </div>
+                    
+                    <!-- Temporary Scrollbar (just an image) -->
+                    <div class="vaultTemporaryScrollbar">
+                    </div>
+                    
+                    <!-- Vault Secondary Nav (the stuff at the bottom) -->
+                    <div class="vaultSecondaryNav">
+                    	<div class="vaultSecondaryNavButton">Upload Document</div>
+						
+                        <input type="text" class="vaultSecondaryNavSearch" placeholder="Search">
+                    </div>
+                    
+                </div><!-- Close #lockerVaultContents -->
+                
+                
+            </div><!-- Close #lockerContainer -->
+        </div><!-- Close #lockerWrapper -->
+        
+        <!-- WEATHER MODULE -->
+        <div class="weatherWrapper">
+        	<h1 class="moduleHeader">St Kilda</h1>
+            
+            <div class="weatherContainer">
+            	
+                <div class="weatherDay">
+                	<p class="weatherDate">Mon 9</p>
+                    <div class="weatherCondition" id="weatherSunny"></div>
+                    <p class="weatherReadings"><span class="bold">29&deg;<span class="celcius">C</span>/</span><span class="uvValue">8</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                <div class="weatherDay">
+                	<p class="weatherDate">Tues 10</p>
+                    <div class="weatherCondition" id="weatherCloudy"></div>
+                    <p class="weatherReadings"><span class="bold">26&deg;<span class="celcius">C</span>/</span><span class="uvValue">5</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                <div class="weatherDay">
+                	<p class="weatherDate">Wed 11</p>
+                    <div class="weatherCondition" id="weatherSunWithClouds"></div>
+                    <p class="weatherReadings"><span class="bold">21&deg;<span class="celcius">C</span>/</span><span class="uvValue">6</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                <div class="weatherDay">
+                	<p class="weatherDate">Thurs 12</p>
+                    <div class="weatherCondition" id="weatherSunWithClouds"></div>
+                    <p class="weatherReadings"><span class="bold">19&deg;<span class="celcius">C</span>/</span><span class="uvValue">4</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                <div class="weatherDay">
+                	<p class="weatherDate">Fri 13</p>
+                    <div class="weatherCondition" id="weatherRainy"></div>
+                    <p class="weatherReadings"><span class="bold">17&deg;<span class="celcius">C</span>/</span><span class="uvValue">2</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                <div class="weatherDay">
+                	<p class="weatherDate">Sat 14</p>
+                    <div class="weatherCondition" id="weatherSunWithClouds"></div>
+                    <p class="weatherReadings"><span class="bold">19&deg;<span class="celcius">C</span>/</span><span class="uvValue">4</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                <div class="weatherDay">
+                	<p class="weatherDate">Sun 15</p>
+                    <div class="weatherCondition" id="weatherRainy"></div>
+                    <p class="weatherReadings"><span class="bold">18&deg;<span class="celcius">C</span>/</span><span class="uvValue">2</span><span class="uv"><sup>UV</sup></span></p>
+                </div>
+                
+                
+            </div><!-- Close #weatherContainer -->
+            
+        </div><!-- Close #weatherWrapper -->
+		
+    </div><!-- Close #lockerWeatherWrapper -->
+        
+        <!-- CALENDAR -->
+        <div class="calendarWrapper">
+        	<h1 class="moduleHeader">Calendar</h1>
+            <div class="moduleButton">Add Events</div>
+            
+            <div class="calendarContainer">
+            
+            	<div class="calendarBacking">
+                
+                	<!-- Days of the week -->
+                	<div class="calendarDays">
+                    	<div class="calendarDaysGap"></div>
+                        <p class="day">Mon 9</p>
+                        <p class="day">Tues 10</p>
+                        <p class="day">Wed 11</p>
+                        <p class="day">Thurs 12</p>
+                        <p class="day">Fri 13</p>
+                        <p class="day">Sat 14</p>
+                        <p class="day">Sat 15</p>
+                    </div>
+                    
+                    <!-- Time of the day -->
+                    <div class="calendarTimeOfDay">
+                    	<p class="timeOfDay allDay">All Day</p>
+                        <p class="timeOfDay">6:00am</p>
+                        <p class="timeOfDay">7:00am</p>
+                        <p class="timeOfDay">8:00am</p>
+                        <p class="timeOfDay">9:00am</p>
+                        <p class="timeOfDay">10:00am</p>
+                        <p class="timeOfDay">11:00am</p>
+                        <p class="timeOfDay">12:00pm</p>
+                        <p class="timeOfDay">1:00pm</p>
+                        <p class="timeOfDay">2:00pm</p>
+                        <p class="timeOfDay">3:00pm</p>
+                        <p class="timeOfDay">4:00pm</p>
+                        <p class="timeOfDay">5:00pm</p>
+                        <p class="timeOfDay">6:00pm</p>
+                        <p class="timeOfDay">7:00pm</p>
+                        <p class="timeOfDay">8:00pm</p>
+                    </div>
+                    
+                    <!-- Calendar Grid Backing -->
+                    <div class="calendarGridBacking">
+                    </div>
+                    
+                </div>
+            	
+            </div><!-- Close #calendarContainer -->
+            
+        </div><!-- Close #calendarWrapper -->
+        
+        
+    </div><!-- Close #contentWrapper -->
+</div ><!-- Close #background -->
+    
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
