@@ -62,4 +62,31 @@ function selectArticle(param){
     }
 }
 
+function toggleAlertPanel()
+{
+    if( $('.alertPanel').is(":visible") ) {
+        $('.alertFlipper').show();
+        $('.alertUpArrow').hide();
+
+        $('.alertPanel').slideUp("slow", function(){
+            $('.alerts').css({ borderBottomLeftRadius: 5, borderBottomRightRadius: 5 });
+        });
+    } else {
+        $('.alertFlipper').hide();
+        $('.alertUpArrow').show();
+
+        $('.alerts').css({ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 });
+        $('.alertPanel').slideDown();
+    }
+}
+
+function activeAlert(){
+    $('.alertMsg').addClass('alertActive');
+    $('.alertFlipper').addClass('alertFlipperActive');
+}
+
+function neutralAlert(){
+    $('.alertMsg').removeClass('alertActive');
+    $('.alertFlipper').removeClass('alertFlipperActive');
+}
 
