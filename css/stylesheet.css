@@ -242,7 +242,7 @@ div.userNavArrows {
 .left {
 	float: left;
 	cursor: pointer;
-	background-image: url(Images/userNavArrow_left.png);
+	background-image: url(images/userNavArrow_left.png);
 }
 
 .left:hover{
@@ -252,7 +252,7 @@ div.userNavArrows {
 .right {
 	float: right;
 	cursor: pointer;
-	background-image: url(Images/userNavArrow_right.png);
+	background-image: url(images/userNavArrow_right.png);
 }
 
 .right:hover{
@@ -286,15 +286,15 @@ div.userNavImage {
 }
 
 .first {
-	background-image: url(Images/userNavImage_01.png);
+	background-image: url(images/userNavImage_01.png);
 }
 
 .second {
-	background-image: url(Images/userNavImage_02.png);
+	background-image: url(images/userNavImage_02.png);
 }
 
 .third {
-	background-image: url(Images/userNavImage_03.png);
+	background-image: url(images/userNavImage_03.png);
 }
 
 /*======== 4. USER'S NAME ========*/
@@ -346,7 +346,7 @@ div.accountAvatar {
 
 div.accountAvatar.AUS {
 	border-radius: 5px 0 0 5px;
-	background-image: url(Images/flag-AUS.png);
+	background-image: url(images/flag-AUS.png);
 	background-repeat: no-repeat;
 }
 
@@ -364,12 +364,12 @@ div.accountSettingsButton {
 	width: 44px;
 	height: 30px;
 	box-shadow: -1px 0 0 rgba(255,255,255,.9), -2px 0 0 rgba(0,0,0,.2);
-	background-image: url(Images/accountSettingsButton_01.png);
+	background-image: url(images/accountSettingsButton_01.png);
 }
 
 div.accountSettingsButton:hover {
 	border-radius: 0 5px 5px 0;
-	background: rgb(249,249,249) url(Images/accountSettingsButton_01.png);
+	background: rgb(249,249,249) url(images/accountSettingsButton_01.png);
 	box-shadow: 0px 1px 2px rgba(0,0,0,.15);
 	cursor: pointer;
 }
@@ -426,51 +426,51 @@ div.rolloverIcons {
 }
 
 	div.personalView {
-		background: url(Images/rollover_sprites_01.png) 0px 156px;
+		background: url(images/rollover_sprites_01.png) 0px 156px;
 	}
 	
 	div.serviceView {
-		background: url(Images/rollover_sprites_01.png) 0px 130px;
+		background: url(images/rollover_sprites_01.png) 0px 130px;
 	}
 	
 	div.enterpriseView {
-		background: url(Images/rollover_sprites_01.png) 0px 104px;
+		background: url(images/rollover_sprites_01.png) 0px 104px;
 	}
 	
 	div.hhView {
-		background: url(Images/rollover_sprites_01.png) 0px 78px;
+		background: url(images/rollover_sprites_01.png) 0px 78px;
 	}
 	
 	div.settings {
-		background: url(Images/rollover_sprites_01.png) 0px 52px;
+		background: url(images/rollover_sprites_01.png) 0px 52px;
 	}
 	
 	div.logOut {
-		background: url(Images/rollover_sprites_01.png) 0px 26px;
+		background: url(images/rollover_sprites_01.png) 0px 26px;
 	}
 	
 	div.accountSettingsRollover a:hover > div.personalView {
-		background: url(Images/rollover_sprites_01.png) 40px 156px;
+		background: url(images/rollover_sprites_01.png) 40px 156px;
 	}
 	
 	div.accountSettingsRollover a:hover > div.serviceView {
-		background: url(Images/rollover_sprites_01.png) 40px 130px;
+		background: url(images/rollover_sprites_01.png) 40px 130px;
 	}
 	
 	div.accountSettingsRollover a:hover > div.enterpriseView {
-		background: url(Images/rollover_sprites_01.png) 40px 104px;
+		background: url(images/rollover_sprites_01.png) 40px 104px;
 	}
 	
 	div.accountSettingsRollover a:hover > div.hhView {
-		background: url(Images/rollover_sprites_01.png) 40px 78px;
+		background: url(images/rollover_sprites_01.png) 40px 78px;
 	}
 	
 	div.accountSettingsRollover a:hover > div.settings {
-		background: url(Images/rollover_sprites_01.png) 40px 52px;
+		background: url(images/rollover_sprites_01.png) 40px 52px;
 	}
 	
 	div.accountSettingsRollover a:hover > div.logOut {
-		background: url(Images/rollover_sprites_01.png) 40px 26px;
+		background: url(images/rollover_sprites_01.png) 40px 26px;
 	}
 	
 ul.useHHas li {
@@ -508,7 +508,7 @@ div.dinosaur {
 	
 	width: 140px;
 	height: 37px;
-	background-image: url(Images/dinosaur_01.png);
+	background-image: url(images/dinosaur_01.png);
 	background-repeat: no-repeat;
 }
 
@@ -579,7 +579,7 @@ div.alertIcon {
 	float: left;
 	width: 48px;
 	height: 42px;
-	background-image:url(Images/alertIcon_01.png);
+	background-image:url(images/alertIcon_01.png);
 	background-repeat: no-repeat;
 }
 
@@ -587,7 +587,7 @@ div.alertIconDisabled {
 	float: left;
 	width: 48px;
 	height: 42px;
-	background-image:url(Images/alertIcon_02.png);
+	background-image:url(images/alertIcon_02.png);
 	background-repeat: no-repeat;
 }
 
@@ -621,40 +621,40 @@ div.alertFlipper {
 	float: right;
 	width: 44px;
 	height: 42px;
-	background-image: url(Images/alertFlipper_01.png);
+	background-image: url(images/alertFlipper_01.png);
 	background-repeat: no-repeat;
     cursor: pointer;
 }
 
 div.alertFlipperActive {
-    background-image: url("Images/alertFlipper_01hover.png");
+    background-image: url("images/alertFlipper_01hover.png");
 }
 
 div.alertFlipperDisabled{
     float: right;
 	width: 44px;
 	height: 42px;
-	background-image: url(Images/alertFlipper_01gray.png);
+	background-image: url(images/alertFlipper_01gray.png);
 	background-repeat: no-repeat;
     cursor: pointer;
 }
 
 div.alertFlipper:hover{
-    background-image: url("Images/alertFlipper_01hover.png");
+    background-image: url("images/alertFlipper_01hover.png");
 }
 
 div.alertUpArrow {
 	float: right;
 	width: 44px;
 	height: 42px;
-	background-image: url(Images/alertFlipper_02.png);
+	background-image: url(images/alertFlipper_02.png);
 	background-repeat: no-repeat;
     cursor: pointer;
     display: none;
 }
 
 div.alertUpArrow:hover{
-    background-image: url("Images/alertFlipper_02hover.png");
+    background-image: url("images/alertFlipper_02hover.png");
 }
 
 div.alertPanel{
@@ -916,7 +916,7 @@ div.imageGalleryArrowLeft {
 	float: left;
 	width: 40px;
 	height: 76px;
-	background-image: url(Images/imageGalleryArrowLeft.png);
+	background-image: url(images/imageGalleryArrowLeft.png);
     cursor: pointer;
 }
 
@@ -924,7 +924,7 @@ div.imageGalleryArrowLeftDark {
 	float: left;
 	width: 40px;
 	height: 76px;
-	background-image: url(Images/imageGalleryArrowLeftDark.png);
+	background-image: url(images/imageGalleryArrowLeftDark.png);
     cursor: pointer;
 }
 
@@ -932,7 +932,7 @@ div.imageGalleryArrowRight {
 	float: left;
 	width: 40px;
 	height: 76px;
-	background-image: url(Images/imageGalleryArrowRight.png);
+	background-image: url(images/imageGalleryArrowRight.png);
     cursor: pointer;
 }
 
@@ -940,7 +940,7 @@ div.imageGalleryArrowRightDark {
 	float: left;
 	width: 40px;
 	height: 76px;
-	background-image: url(Images/imageGalleryArrowRightDark.png);
+	background-image: url(images/imageGalleryArrowRightDark.png);
     cursor: pointer;
 }
 
@@ -952,7 +952,7 @@ div.imageGalleryArrowRightDark:hover {
 }
 
 div.imageGalleryNoImage {
-    background: #FFF url("Images/noImage.png");
+    background: #FFF url("images/noImage.png");
     width: 102px;
     height: 76px;
     display: block;
@@ -986,7 +986,7 @@ div.imageSliderAddImage {
 	width: 100px;
 	height: 74px;
 	border: 1px solid rgb(210,210,210);
-	background: url(Images/imageGalleryAddImage_01.png) no-repeat rgb(240,240,240);
+	background: url(images/imageGalleryAddImage_01.png) no-repeat rgb(240,240,240);
 }
 
 div.imageSliderAddImage > a {
@@ -996,11 +996,11 @@ div.imageSliderAddImage > a {
 	font-size: 0.75em;
 	color: rgb(9,142,190);
 	text-decoration: none;
-    background: url(Images/imageGalleryAddImage_01.png) no-repeat rgb(240,240,240);
+    background: url(images/imageGalleryAddImage_01.png) no-repeat rgb(240,240,240);
 }
 
 div.imageSliderAddImage > a:hover {
-    background: url(Images/imageGalleryAddImage_01.png) no-repeat rgb(225,225,225);
+    background: url(images/imageGalleryAddImage_01.png) no-repeat rgb(225,225,225);
 }
 
 div.imageSliderAddImage > a > p {
@@ -1115,7 +1115,7 @@ div.timelineDateSelectorArrowLeft {
 	margin-top: 4px;
 	width: 6px;
 	height: 9px;
-	background-image: url(Images/timelineDateSelectorArrow_left.png);
+	background-image: url(images/timelineDateSelectorArrow_left.png);
 }
 
 div.timelineDateSelectorArrowRight {
@@ -1123,7 +1123,7 @@ div.timelineDateSelectorArrowRight {
 	margin-top: 4px;
 	width: 6px;
 	height: 9px;
-	background-image: url(Images/timelineDateSelectorArrow_right.png);
+	background-image: url(images/timelineDateSelectorArrow_right.png);
 }
 
 /* Timeline - ( Day option selected ) */
@@ -1360,7 +1360,7 @@ div.vaultListRowIcon.none {
 }
 
 div.vaultListRowIcon.PDF {
-	background: url(Images/pdficon_large.png) no-repeat;
+	background: url(images/pdficon_large.png) no-repeat;
 	background-position: 18px;
 }
 
@@ -1408,7 +1408,7 @@ div.vaultTemporaryScrollbar {
 	right: 0;
 	width: 26px;
 	height: 252px;
-	background: url(Images/lockerVaultTemporaryScrollbar_01.png);
+	background: url(images/lockerVaultTemporaryScrollbar_01.png);
 }
 
 /*======== 14b. VAULT - SECONDARY NAV ========*/
@@ -1455,7 +1455,7 @@ input.vaultSecondaryNavSearch {
 	height: 30px;
 	border: 1px solid rgb(200,200,200);
 	border-radius: 5px;
-	background: white url(Images/lockverVaultTemporarySearchbarIcon_01.png) no-repeat right;
+	background: white url(images/lockverVaultTemporarySearchbarIcon_01.png) no-repeat right;
 	box-shadow: inset 0 0 3px rgba(0,0,0,.2);
 }
 
@@ -1507,75 +1507,75 @@ div.weatherCondition {
 }
 
 div.weatherCondition.weatherFog {
-    background: url(Images/weatherCondition-weatherFog.png) no-repeat;
+    background: url(images/weatherCondition-weatherFog.png) no-repeat;
 }
 
 div.weatherCondition.weatherHazy {
-    background: url(Images/weatherCondition-weatherHazy.png) no-repeat;
+    background: url(images/weatherCondition-weatherHazy.png) no-repeat;
 }
 
 div.weatherCondition.weatherFlurries {
-    background: url(Images/weatherCondition-weatherFlurries.png) no-repeat;
+    background: url(images/weatherCondition-weatherFlurries.png) no-repeat;
 }
 
 div.weatherCondition.weatherSunny {
-	background: url(Images/weatherCondition-weatherSunny.png) no-repeat;
+	background: url(images/weatherCondition-weatherSunny.png) no-repeat;
 }
 
 div.weatherCondition.weatherExtremeHeat {
-	background: url(Images/weatherCondition-weatherExtremeHeat.png) no-repeat;
+	background: url(images/weatherCondition-weatherExtremeHeat.png) no-repeat;
 }
 
 div.weatherCondition.weatherMostlyCloudy {
-    background: url(Images/weatherCondition-weatherMostlyCloudy.png) no-repeat;
+    background: url(images/weatherCondition-weatherMostlyCloudy.png) no-repeat;
 }
 
 div.weatherCondition.weatherMostlySunny {
-	background: url(Images/weatherCondition-weatherMostlySunny.png) no-repeat;
+	background: url(images/weatherCondition-weatherMostlySunny.png) no-repeat;
 }
 
 div.weatherCondition.weatherPartlyCloudy {
-    background: url(Images/weatherCondition-weatherPartlyCloudy.png) no-repeat;
+    background: url(images/weatherCondition-weatherPartlyCloudy.png) no-repeat;
 }
 
 div.weatherCondition.weatherPartlySunny {
-    background: url(Images/weatherCondition-weatherPartlySunny.png) no-repeat;
+    background: url(images/weatherCondition-weatherPartlySunny.png) no-repeat;
 }
 
 div.weatherCondition.weatherCloudy {
-	background: url(Images/weatherCondition-weatherCloudy.png) no-repeat;
+	background: url(images/weatherCondition-weatherCloudy.png) no-repeat;
 }
 
 div.weatherCondition.weatherWindy {
-	background: url(Images/weatherCondition-weatherWindy.png) no-repeat;
+	background: url(images/weatherCondition-weatherWindy.png) no-repeat;
 }
 
 div.weatherCondition.weatherRainy {
-	background: url(Images/weatherCondition-weatherRainy.png) no-repeat;
+	background: url(images/weatherCondition-weatherRainy.png) no-repeat;
 }
 
 div.weatherCondition.weatherFreezingRain {
-    background: url(Images/weatherCondition-weatherFreezingRain.png) no-repeat;
+    background: url(images/weatherCondition-weatherFreezingRain.png) no-repeat;
 }
 
 div.weatherCondition.weatherSleet {
-    background: url(Images/weatherCondition-weatherSleet.png) no-repeat;
+    background: url(images/weatherCondition-weatherSleet.png) no-repeat;
 }
 
 div.weatherCondition.weatherStormy {
-	background: url(Images/weatherCondition-weatherStormy.png) no-repeat;
+	background: url(images/weatherCondition-weatherStormy.png) no-repeat;
 }
 
 div.weatherCondition.weatherSnow {
-    background: url(Images/weatherCondition-weatherSnow.png) no-repeat;
+    background: url(images/weatherCondition-weatherSnow.png) no-repeat;
 }
 
 div.weatherCondition.weatherScatteredClouds {
-    background: url(Images/weatherCondition-weatherScatteredClouds.png) no-repeat;
+    background: url(images/weatherCondition-weatherScatteredClouds.png) no-repeat;
 }
 
 div.weatherCondition.weatherThunderStorms {
-	background: url(Images/weatherCondition-weatherThunderStorms.png) no-repeat;
+	background: url(images/weatherCondition-weatherThunderStorms.png) no-repeat;
 }
 
 div.weatherPrecipitatonPercent {
@@ -1625,6 +1625,11 @@ span.uv {
 }
 
 /*======== 16. CALENDAR MODULE ========*/
+
+/* Calendar wrapper*/
+div.calendarContentWrapper {
+    height: 1190px;
+}
 
 /* Calendar wrapper*/
 div.calendarWrapper {
@@ -1685,6 +1690,472 @@ div.calendarDaysGap {
 	float: left;
 	width: 54px;
 	height: 32px;
+}
+
+/*CALENDAR MODULE STYLES*/
+
+.calWrapper {
+    float: left;
+	margin-top: 20px;
+	width: 900px;
+	height: 990px;
+	border: 1px solid white;
+	border-radius: 10px;
+    background: #f7fcff;
+    -moz-box-shadow: 0 0 3px #ededed;
+    -webkit-box-shadow: 0 0 3px #ededed;
+    box-shadow: 0 0 3px #d9dde0;
+}
+
+.calHeader {
+    height: 65px;
+}
+
+.calDateRange {
+    color: #323232;
+    margin: 28px 0 0 15px;
+    float: left;
+    font-size: 13px;
+}
+
+.calDateRange p {
+    float: left;
+    margin-right: 10px;
+}
+
+.calLeftArrow {
+    background: url("images/calLeftArrow.png");
+    width: 15px;
+    height: 14px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.calRightArrow {
+    background: url("images/calRightArrow.png");
+    width: 15px;
+    height: 14px;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+
+.calLeftArrow, .calRightArrow {
+    opacity: 0.6;
+}
+
+.calAddEvent {
+    float: right;
+    margin: 28px 30px 0 0;
+    font-size: 14px;
+}
+
+.calAddEvent a {
+    color: #1175b6;
+    text-decoration: none;
+}
+
+.calContainer {
+    background: #cdd0d5;
+    border-radius: 10px;
+    height: 900px;
+    width: 860px;
+    margin: 0 auto;
+    border: 1px solid #b4b4b4;
+    padding: 30px 15px 15px;;
+}
+
+.calContent {
+    width: 100%;
+    height: 854px;
+    margin: 0 auto;
+    border: 2px solid #FFFFFF;
+    background: #fafafa;
+    box-shadow: inset 0 20px 20px -10px #eee;
+    -webkit-box-shadow: inset 0 20px 20px -10px #eee;
+    -moz-box-shadow: inset 0 20px 20px -10px #eee;
+}
+
+.calBlock {
+    height: 50px;
+    width: 823px;
+}
+
+.calBlockHeader {
+    height: 40px;
+    width: 823px;
+}
+
+.calBlockAllday {
+    height: 60px;
+    width: 823px;
+}
+
+.ccbTime {
+    width: 74px;
+    height: 100%;
+    color: #515151;
+    border-right: 1px solid #dcdcdc;
+    float: left;
+    display: block;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.ccbTime p {
+    margin-top: -7px;
+}
+
+.ccbDate {
+    width: 107px;
+    height: 100%;
+    color: #515151;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 2px solid #f5f5f5;
+    float: left;
+    display: block;
+}
+
+.ccbDateAm {
+    height: 24px;
+    border-bottom: 1px solid #fafafa;
+    background: #FFFFFF;
+}
+
+.ccbDatePm {
+    height: 25px;
+    background: #FFFFFF;
+}
+
+.ccbtAllDay {
+    line-height: 60px;
+    margin-top: 0;
+}
+
+.ccbdAllDay {
+    border-bottom: 1px solid #e6e6e6;
+    background: #ebebeb;
+}
+
+.calBlock .ccbDate:last-child,
+.calBlockHeader .ccbDate:last-child,
+.calBlockAllday .ccbDate:last-child{
+    border-right: none;
+}
+
+.calBlockHeader .ccbDate {
+    text-align: center;
+    line-height: 40px;
+}
+
+.ccbdAllDay .ccbdCont {
+    height: 60px;
+}
+
+.ccbdCont {
+    position: absolute;
+    border: 1px solid #33b74f;
+    border-radius: 3px;
+    width: 107px;
+    height: 75px;
+    background: #9af592;
+    float: left;
+    cursor: pointer;
+}
+
+.ccbdCont:hover {
+    background: #8efd63;
+    z-index: 1000 !important;
+}
+
+.ccbdTitle, .ccbaTitle {
+    background: #29c53a;
+    color: #ffffff;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    overflow: hidden;
+    padding-left: 3px;
+}
+
+.ccbdDesc, .ccbaDesc {
+    color: #676d67;
+    font-size: 11px;
+    overflow: hidden;
+    padding: 4px 3px 3px;
+}
+
+/*calendar popupwindows*/
+.buttonOrange{
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #c88830;
+    border: 1px solid #fa787c;
+    background-color: #ffe45d;
+    background-image: -moz-linear-gradient(top, #ffe45d, #f09323);
+    background-image: -ms-linear-gradient(top, #ffe45d, #f09323);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffe45d), to(#f09323));
+    background-image: -webkit-linear-gradient(top, #ffe45d, #f09323);
+    background-image: -o-linear-gradient(top, #ffe45d, #f09323);
+    background-image: linear-gradient(top, #ffe45d, #f09323);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe45d', endColorstr='#f09323', GradientType=0);
+}
+
+div.addEventWindow {
+    top: 120px;
+	width: 500px;
+	min-height: 350px;
+    background: #f4fcff;
+    padding-bottom: 15px;
+}
+
+div.editEventWindow {
+    top: 120px;
+	width: 500px;
+	min-height: 350px;
+    background: #f4fcff;
+    padding-bottom: 15px;
+}
+
+div.editAllDayEventWindow {
+    top: 120px;
+	width: 500px;
+	min-height: 350px;
+    background: #f4fcff;
+    padding-bottom: 15px;
+}
+
+div.addEventHeader {
+    height: 50px;
+}
+
+div.addEventWinContent {
+    margin: 10px auto;
+    width: 460px;
+}
+
+div.aewWrapper {
+    width: 460px;
+    margin: 0;
+}
+
+div.aewLabel {
+    color: #797b7c;
+    font-size: 14px;
+    margin: 7px 0 3px;
+}
+
+div.aewField {
+    padding: 5px 0;
+}
+
+div.aewField input {
+    padding: 9px 10px 8px;
+    border-radius: 3px;
+    border: 1px solid #29a73a;
+    font-size: 14px;
+    color: #505050;
+    font-family: Myriad Pro, Arial, sans-serif;
+}
+
+div.aewField textarea {
+    border: 1px solid #29a73a;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 9px 10px;
+    width: 100%;
+    font-family: Myriad Pro, Arial, sans-serif;
+    color: #505050;
+}
+
+div.aewCont {
+    margin-right: 11px;
+    display: inline-block;
+}
+
+div.aewContLast {
+    margin: 0;
+    display: inline-block;
+}
+
+div.aewCb {
+    margin: 30px 8px 0 0;
+}
+
+div.aewCb input[type=checkbox]{
+    border: 1px solid #c8c8c8;
+    color: #268e3a;
+}
+
+.aewFld1 {
+    width: 100%;
+}
+
+.aewFld2 {
+    width: 140px;
+    background: #FFF url("images/calendar_icn.png") no-repeat 95% 50%;
+    padding-right: 30px !important;
+}
+
+.aewFld3 {
+    width: 100px;
+}
+
+.eventDetailsWindow ,
+.eventDetailsAllDayWindow {
+    width: 450px;
+	height: 395px;
+    background: #ffffff;
+    -moz-box-shadow: 0 0 3px #ededed;
+    -webkit-box-shadow: 0 0 3px #ededed;
+    box-shadow: 0 0 3px #d9dde0;
+}
+
+.eventDetailsContent {
+    margin: 0 auto;
+    width: 410px;
+    padding-bottom: 15px;
+}
+
+.edwAttachmentCont {
+    border-top: 1px dashed #adadad;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.edwAttachment p {
+    float: left;
+    color: #969696;
+    font-size: 14px;
+}
+
+.edwAttachment .attachIcn {
+    float: left;
+    margin-top: -13px;
+}
+
+.edwEditEvent {
+    float: right;
+}
+
+.edwEditEvent a {
+    color: #646464;
+    text-decoration: none;
+}
+
+.edwTime {
+    height: 20px;
+	float: right;
+	margin: 27px 20px 20px;
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
+.eventDetailsHdr {
+    height: 50px;
+}
+
+.eventDetailsCont h3 {
+    color: #419c53;
+    font-size: 15px;
+    margin: 20px 0 12px;
+}
+
+.eventDetailsCont p {
+    color: #626262;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.eventDetailsCont p.edwOther {
+    font-style: italic;
+    color: #969696;
+}
+
+.edwAttachWrapper {
+    background: #ebf8ff;
+    margin-top: 15px;
+    height: 35px;
+    color: #787878;
+    font-size: 14px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.edwAttachWrapper p {
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.attachPdfIcn {
+    float: left;
+    margin: 8px 10px 0 25px;
+}
+
+.sendEventWrapper {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px dashed #cecece;
+}
+
+.sendEventWrapper h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.sendEventWrapper .sendEventDD {
+    float: left;
+    margin-left: 10px;
+}
+
+.sendEventDD select {
+    padding: 3px 2px;
+}
+
+.aewButtons {
+    float: right;
+}
+
+.aewButtonsWrap {
+    height: 40px;
+    margin-top: 15px;
+}
+
+.aewButtonsWrap a{
+    color: #3b5ec7;
+    text-decoration: none;
+}
+
+.aewButtons input {
+    margin-left: 10px;
+}
+
+.aewBtnLeft{
+    float: left;
+    line-height: 40px;
+}
+
+.sendAttach {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.selButtonWrap {
+    margin: 25px 10px 0 0;
+}
+
+.ce-attachment {
+    background: url("images/icon_close.png") no-repeat;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    margin-top: 10px;
+    color: #797b7c;
 }
 
 /* days of the week font styling definitions */
@@ -2223,7 +2694,7 @@ div.nf-closeBtn{
 	float: right;
 	margin: 20px 20px;
 	cursor: pointer;
-	background: url("Images/nf-close.png");
+	background: url("images/nf-close.png");
 	background-repeat:no-repeat;
 }
 
@@ -2349,96 +2820,96 @@ div.nf-icnDelete{
 	float: left;
 	cursor: pointer;
 	margin-left: 180px;
-	background: url("Images/nfDelete_neutral.png");
+	background: url("images/nfDelete_neutral.png");
 }
 
 div.nf-icnDelete:hover{
-	background: url("Images/nfDelete_hover.png");
+	background: url("images/nfDelete_hover.png");
 }
 
 
 div.nf-bold{
-    background:url("Images/nfBold_Neutral.png");
+    background:url("images/nfBold_Neutral.png");
 }
 
 div.nf-bold:hover{
-    background:url("Images/nfBold_hover.png");
+    background:url("images/nfBold_hover.png");
 }
 
 div.nf-bold:active{
-    background: url("Images/nfBold_pressed.png");
+    background: url("images/nfBold_pressed.png");
 }
 
 div.nf-italic{
-    background: url("Images/nfItalic_neutral.png");
+    background: url("images/nfItalic_neutral.png");
 }
 
 div.nf-italic:hover{
-    background: url("Images/nfItalic_hover.png");
+    background: url("images/nfItalic_hover.png");
 }
 
 div.nf-italic:active{
-    background: url("Images/nfItalic_pressed.png");
+    background: url("images/nfItalic_pressed.png");
 }
 
 div.nf-underline{
-    background: url("Images/nfUnderline_neutral.png");
+    background: url("images/nfUnderline_neutral.png");
 }
 
 div.nf-underline:hover{
-    background: url("Images/nfUnderline_hover.png");
+    background: url("images/nfUnderline_hover.png");
 }
 
 div.nf-underline:active{
-    background: url("Images/nfUnderline_pressed.png");
+    background: url("images/nfUnderline_pressed.png");
 }
 
 div.nf-textsize{
-    background: url("Images/nfTextSize_neutral.png");
+    background: url("images/nfTextSize_neutral.png");
 }
 
 div.nf-textsize:hover{
-    background: url("Images/nfTextSize_hover.png");
+    background: url("images/nfTextSize_hover.png");
 }
 
 div.nf-textsize:active{
-    background: url("Images/nfTextSize_pressed.png");
+    background: url("images/nfTextSize_pressed.png");
 }
 
 div.nf-numbered{
-    background: url("Images/nfNumbered_neutral.png");
+    background: url("images/nfNumbered_neutral.png");
 }
 
 div.nf-numbered:hover{
-    background: url("Images/nfNumbered_hover.png");
+    background: url("images/nfNumbered_hover.png");
 }
 
 div.nf-numbered:active{
-    background: url("Images/nfNumbered_pressed.png");
+    background: url("images/nfNumbered_pressed.png");
 }
 
 div.nf-bulletlist{
-    background: url("Images/nfBulletList_neutral.png");
+    background: url("images/nfBulletList_neutral.png");
 }
 
 div.nf-bulletlist:hover{
-    background: url("Images/nfBulletList_hover.png");
+    background: url("images/nfBulletList_hover.png");
 }
 
 div.nf-bulletlist:active{
-    background: url("Images/nfBulletList_pressed.png");
+    background: url("images/nfBulletList_pressed.png");
 }
 
 div.nf-attachment{
-    background: url("Images/nfAttachment_neutral.png");
+    background: url("images/nfAttachment_neutral.png");
 }
 
 div.nf-attachment:hover{
-    background: url("Images/nfAttachment_hover.png");
+    background: url("images/nfAttachment_hover.png");
 }
 
 div.nf-attachment:active{
-    background: url("Images/nfAttachment_hover.png");
+    background: url("images/nfAttachment_hover.png");
 }
 
 div.nf-addarticleBtn{
@@ -2813,7 +3284,7 @@ div.selectBtn{
 }
 
 .buttonClose{
-    background: url("Images/icon_close.png") no-repeat;
+    background: url("images/icon_close.png") no-repeat;
     height: 16px;
     width: 16px;
     float: left;
@@ -2961,7 +3432,7 @@ div.selectBtn{
 .tagChildrenImage{
     height: 520px;
     width: 780px;
-    background: #dcdcdc url("Images/imageGalleryImage_02Large.png");
+    background: #dcdcdc url("images/imageGalleryImage_02Large.png");
 }
 
 .tagChildrenFtr{
@@ -3066,11 +3537,11 @@ div.selectBtn{
 }
 
 .galleryNavArrowLeft{
-    background: url("Images/galleryArrow-Left.png") no-repeat center center;
+    background: url("images/galleryArrow-Left.png") no-repeat center center;
 }
 
 .galleryNavArrowRight{
-    background: url("Images/galleryArrow-Right.png") no-repeat center center;
+    background: url("images/galleryArrow-Right.png") no-repeat center center;
 }
 
 .galleryImageContainer{
@@ -3492,7 +3963,7 @@ select.iimSelectBx{
 	margin: 30px;
 	border: none;
 	font-size: 14px;
-	background:#FFFFFF url(Images/internalMonitor/HH-Design-arrowSelect.png) no-repeat 145px 10px;
+	background:#FFFFFF url(images/internalMonitor/HH-Design-arrowSelect.png) no-repeat 145px 10px;
 	
 	-webkit-appearance: none;
   	-webkit-border-radius: 0px;
@@ -3814,7 +4285,7 @@ div.ccms-row{
 	border: 1px solid #8c59b1;
 	border-radius: 5px;
 	box-shadow: 0 1px 2px rgba(0,0,0,.15);
-	background: url("Images/ccms/ccms-rowBG.png"); 
+	background: url("images/ccms/ccms-rowBG.png"); 
 }
 
 div.ccms-row-selected{
@@ -3825,7 +4296,7 @@ div.ccms-row-selected{
 	border: 1px solid #ff6d2b;
 	border-radius: 5px;
 	box-shadow: 0 1px 2px rgba(0,0,0,.15);
-	background: url("Images/ccms/ccms-rowBG2.png"); 
+	background: url("images/ccms/ccms-rowBG2.png"); 
 }
 
 img.ccmsArrowDown{
@@ -3869,7 +4340,7 @@ input.ccmsBtn{
 	cursor: pointer;
 	border-radius: 3px;
 	border: 1px solid #646464;
-	background: url("Images/ccms/ccmsBtn-bg.png");
+	background: url("images/ccms/ccmsBtn-bg.png");
 	text-shadow: #fff 1px 1px 0px;
 }
 
