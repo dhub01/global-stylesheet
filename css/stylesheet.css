@@ -122,7 +122,11 @@ TABLE OF CONTENTS
 
 @font-face {
 	font-family: 'Myriad Pro REG';
-	src: url("font/myriad-pro/MYRIADPRO-REGULAR.otf") format("opentype");
+    src: url("font/myriad-pro/MYRIADPROREGULAR.eot"); /* IE9 Compat Modes */
+	src: url("font/myriad-pro/MYRIADPROREGULAR.eot?#iefix") format('embedded-opentype'),
+        url("font/myriad-pro/MYRIADPROREGULAR.woff") format("woff"), /* Modern Browsers */
+        url("font/myriad-pro/MYRIADPROREGULAR.ttf") format("truetype"), /* Modern Browsers */
+        url("font/myriad-pro/MYRIADPRO-REGULAR.otf") format("opentype");
 }
 
 @font-face {
