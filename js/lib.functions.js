@@ -43,12 +43,37 @@ function getHighestZIndex(){
     return maxZ;
 }
 
+
+function openPopupWindow(cls, modal, bg){
+    
+    var acls = (modal == 0) ? 'oLayer' : 'nLayer';
+    var close= (bg == 0) ? "onclick='closeDashWindow(\""+cls+"\");'" : "";
+    
+    var top = Math.max(0, (($(window).height() - $("."+cls).outerHeight()) / 2) + $(window).scrollTop()) + "px";
+    var zIndex  = getHighestZIndex();
+    
+    var xInd = parseFloat(zIndex) + 100;
+    var yInd = parseFloat(zIndex) + 50;
+    
+    $("."+cls).css({"zIndex":xInd, "top" :top}).fadeIn();
+    
+    var divElem = $("<div id='"+cls+"overlay' class='overlayContainer "+acls+"' "+close+"></div>");
+    divElem.css('z-index',yInd).appendTo('body').fadeIn();
+    
+    return false;
+}
+
 function closeDashWindow(cls){
     $("."+cls+", #"+cls+"overlay").hide();
 }
 
 function closeTagChildrenWindows(){
     var divElems = ".tagChildrenDropDown, .tagChildrenWindow, #tagChildrenDropDownoverlay, #tagChildrenWindowoverlay";
+    $(divElems).hide();
+}
+
+function closeTagChildEnterpriseWindows(){
+    var divElems = ".tagChildrenDDEnterprise, .tagChildrenWindow, #tagChildrenDDEnterpriseoverlay, #tagChildrenWindowoverlay";
     $(divElems).hide();
 }
 
